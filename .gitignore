@@ -1,2 +1,3 @@
-./bin/
-./obj/
+FAQisLOVE/bin/*
+FAQisLOVE/obj/*
+.vs/FAQisLOVE/FileContentIndex/*

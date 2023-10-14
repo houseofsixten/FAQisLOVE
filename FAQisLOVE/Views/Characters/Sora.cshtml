@@ -18,6 +18,7 @@
         }
 
         document.getElementById("modelImage").src = "../img/" + modelImages[imageIndex];
+        document.getElementById("modelImageNarrow").src = "../img/" + modelImages[imageIndex];
 
     }
 
@@ -26,6 +27,8 @@
 <div class="button-holder">
     <button type="button" onclick="nextImage()">Switch Image</button>
 </div>
+
+<img class="model-image-narrow" alt="Sora model sheet image" id="modelImageNarrow" src="../img/sora_model_01.png" />
 
 <div class="main-content-container-sora">    
     <div class="model-image-holder">
