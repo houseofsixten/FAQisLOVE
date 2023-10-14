@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace MvcMovie.Controllers
+namespace FAQisLOVE.Controllers
 {
     public class CharactersController : Controller
     {
