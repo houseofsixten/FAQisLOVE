@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MvcMovie</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MvcMovie.styles.css" asp-append-version="true" />    
+</head>
+<body>
+    <div class="header">
+
+        @{
+            var controller = ViewContext.RouteData.Values["controller"].ToString();
+            var action = ViewContext.RouteData.Values["action"].ToString();
+
+            ViewData["HomeClass"] = action == "Index" ? "custom-nav-item-selected" : "custom-nav-item";
+            ViewData["StoryClass"] = action == "Story" ? "custom-nav-item-selected" : "custom-nav-item";
+            ViewData["CharactersClass"] = controller == "Characters" ? "custom-nav-item-selected" : "custom-nav-item";
+
+            var navItems = new List<string> { "Index", "Story", "Characters" };
+        }
+
+        <div class="custom-nav">
+            <div class="@ViewData["HomeClass"]"><a class="text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a></div>
+            <div class="@ViewData["StoryClass"]"><a class="text-dark" asp-area="" asp-controller="Home" asp-action="Story">Story</a></div>
+            <div class="@ViewData["CharactersClass"]"><a class="text-dark" asp-area="" asp-controller="Characters" asp-action="Miko">Characters</a></div>
+        </div>
+
+        @{
+            if (controller == "Characters")
+            {
+                 <div class="custom-subnav">
+ 
+                    @{
+                        foreach (string s in ViewBag.Characters)
+                        {
+                            string subnavClass = (s == ViewBag.CharName ? "custom-subnav-item-selected" : "custom-subnav-item");
+                            <div class="@subnavClass"><a class="text-dark" asp-area="" asp-controller="Characters" asp-action="@s">@s</a></div>
+                        }
+                    }
+                    
+                 </div>
+          
+            }
+        }
+    </div>
+
+    <div class="content-holder">
+        <div class="content">
+            @RenderBody()
+        </div>
+    </div>
+
+    <div class="bottom-holder">
+        <div class="bottom">
+           <div class="bottom-item-selected">Hololive</div>
+           <div class="bottom-item">House of Sixten</div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

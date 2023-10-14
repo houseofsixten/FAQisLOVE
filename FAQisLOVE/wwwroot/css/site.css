@@ -1,0 +1,161 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.header {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+}
+
+.content-holder {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.content {    
+    border-bottom: 1px black solid;
+    padding: 20px;    
+}
+
+.custom-nav {
+    display: flex;
+    justify-content: flex-start;
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+}
+
+.bottom-holder {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: flex-end;    
+    border-bottom: 1px black solid;
+}
+
+.bottom-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;    
+}
+
+.bottom-item-selected {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: lightpink;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+}
+
+.custom-nav-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.custom-nav-item-selected {
+    padding: 5px;
+    background-color: lightpink;    
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.custom-subnav {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px;
+    border-bottom: 1px black solid;
+    background-color: papayawhip;
+}
+
+.custom-subnav-item {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.custom-subnav-item-selected {
+    padding: 5px;
+    background-color: white;
+    background-color: lightpink;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.main-content-container-sora {
+    position: relative;    
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.main-content-container-sora::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/soramama.jpg");
+    background-size: cover;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+}
+
+.button-holder {
+    padding-bottom: 10px;
+}
+
+.title {
+    position: relative;        
+    line-height: 0.9;
+    text-align: left;
+}
+
+.text-holder {
+    padding: 30px;
+}
+
+.model-image-holder {
+    opacity: 1.0;
+    z-index: 2000;
+    width: 300px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.model-image {
+    opacity: 1.0;
+    z-index: 2000;    
+    max-height: 600px;    
+}

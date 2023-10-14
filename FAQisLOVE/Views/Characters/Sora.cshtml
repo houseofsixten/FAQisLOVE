@@ -1,0 +1,57 @@
+﻿
+
+<script language="javascript" type="text/javascript">
+
+    const modelImages = ["sora_model_01.png", "sora_model_02.png", "sora_model_03.png"];
+
+    var imageIndex = 0;
+
+    function nextImage() {
+
+        // console.log("Switching to next image");
+
+        if (imageIndex + 1 >= modelImages.length) {
+            imageIndex = 0;
+        }
+        else {
+            imageIndex++;
+        }
+
+        document.getElementById("modelImage").src = "../img/" + modelImages[imageIndex];
+
+    }
+
+</script>
+
+<div class="button-holder">
+    <button type="button" onclick="nextImage()">Switch Image</button>
+</div>
+
+<div class="main-content-container-sora">    
+    <div class="model-image-holder">
+    @{
+        <img class="model-image" alt="Sora model sheet image" id="modelImage" src="../img/sora_model_01.png" />
+	}
+	</div>
+	<div class="text-holder">
+        <h1 class="title">Sora Tokino</h1>
+        <p>Goddess Hiding in Plain Sight</p>
+        
+        A handful of Japanese girls (and boys) in the Torrance, California area are named after
+        Sora Tokino, the Sky Mother - one of the Shinto patron deities of the nearby Shrine of Shusse Inari.
+        But Miko, who works as a priestess at that shrine, is the only person on earth who knows
+        that one of these Soras is the goddess herself.<br />
+        <br/>        
+        Inspired by Miko's singing and dancing talent, the Sky Mother has taken human form
+        in order to pursue her own ambitions of becoming a pop idol. Sora aims to become a star
+        without revealing her divine nature or using her powers to cheat.<br/>
+        <br/>
+        A literal goddess descended to earth, Sora is kind, cheerful, hardworking, and motherly,
+        with vast reserves of patience and forgiveness. Sealing her divinity while pursuing her idol dream
+        has caused Sora to develop a deeper appreciation of humanity in general and Miko in particular.
+        Sora's bond with Miko is a bond between two long-time friends working toward the same goal
+        while sharing the coolest secret ever.
+    </div>
+</div>
+
+    
